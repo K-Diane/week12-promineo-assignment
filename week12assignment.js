@@ -41,7 +41,12 @@ async function createContact() {
   const email = document.getElementById("contact-email").value;
   const phoneNumber = document.getElementById("contact-phoneNumber").value;
   // Create an object representing the new contact and Convert the contact object to a JSON string
-  let newCreatedContact = { id, name, email, phoneNumber };
+  let newCreatedContact = {
+    id: id,
+    name: name,
+    email: email,
+    phoneNumber: phoneNumber,
+  };
   const response = await fetch(apiUrl, {
     method: "POST",
     headers: {
